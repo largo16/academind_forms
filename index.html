@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <form action="/" method="GET">
+            <h2>User information:</h2>
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="user-name">
+            
+            <label for="useremail">User email address</label>
+            <input type="email" id="useremail" name="user-email">
+
+            <label for="userage">User age</label>
+            <input type="number" id="userage" name="user-age">
+
+            <label for="userpass">User Password</label>
+            <input type="password" id="userpass" name="user-password">
+
+            <label for="userbirthdate">User Birthdate </label>
+            <input type="date" id="userbirthdate" name="user-birthdate">
+
+            <hr>
+
+            <h2>Verification method:</h2>
+            <label for="viatext">Via text message(SMS)</label>
+            <input type="radio" name="verify" id="viatext" value="text">
+            <label for="viaemail">Via email</label>
+            <input type="radio" name="verify" id="viaemail" value="email">
+            <label for="vialandline">Phone call</label>
+            <input type="radio" name="verify" id="vialandline" value="phone">
+            
+            <button>Submit</button>
+        </form>
+    </main>
+    
+</body>
+</html>
