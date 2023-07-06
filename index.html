@@ -1,47 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
     <title>HTML Forms</title>
 </head>
+
 <body>
-    <header></header>
+    <header>
+        <h1>User information:</h1>
+    </header>
     <main>
         <form action="/" method="GET">
-            <h2>User information:</h2>
-            <label for="username">User Name</label>
-            <input type="text" id="username" name="user-name">
-            
-            <label for="useremail">User email address</label>
-            <input type="email" id="useremail" name="user-email">
 
-            <label for="userage">User age</label>
-            <input type="number" id="userage" name="user-age">
+            <section id="personal-details">
+                <h2>Your personal details</h2>
+                <ul>
+                    <li>
+                        <label for="username">User Name</label>
+                        <input type="text" id="username" name="user-name" />
+                    </li>
+                    <li>
+                        <label for="useremail">User email address</label>
+                        <input type="email" id="useremail" name="user-email" />
 
-            <label for="userpass">User Password</label>
-            <input type="password" id="userpass" name="user-password">
+                    </li>
+                    <li>
 
-            <label for="userbirthdate">User Birthdate </label>
-            <input type="date" id="userbirthdate" name="user-birthdate">
+                        <label for="userpass">User Password</label>
+                        <input type="password" id="userpass" name="user-password" />
+
+                    </li>
+                </ul>
+            </section>
 
             <hr>
 
-            <h2>Verification method:</h2>
-            <label for="viatext">Via text message(SMS)</label>
-            <input type="radio" name="verify" id="viatext" value="text">
-            <label for="viaemail">Via email</label>
-            <input type="radio" name="verify" id="viaemail" value="email">
-            <label for="vialandline">Phone call</label>
-            <input type="radio" name="verify" id="vialandline" value="phone">
+            <section id="more-details">
+                <h2>More details</h2>
+                <ul>
+                    <li>
+                        <label for="userage">User age</label>
+                        <input type="number" id="userage" name="user-age" />
+
+                    </li>
+                    <li> <label for="userbirthdate">User Birthdate </label>
+                        <input type="date" id="userbirthdate" name="user-birthdate" />
+                    </li>
+                    <li>
+                        <label for="favorite-color">Your favorite color?</label>
+                        <select name="favorite-color" id="favorite-color">
+                            <option value="blue">Blue</option>
+                            <option value="red">Red</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <section>
+                <ul>
+                    <li>
+                        <label for="usermessage">Your Message:</label>
+                        <textarea name="user-message" id="usermessage" cols="30" rows="10"></textarea>
+                    </li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>How should we verify your account?</h2>
+                <ul>
+                    <li class="radio-form-inline">
+                        <input type="radio" name="verify" id="viatext" value="text" />
+                        <label for="viatext">Via text message (SMS)</label>
+                    </li>
+
+                    <li class="radio-form-inline">
+                        <input type="radio" name="verify" id="viaemail" value="email" />
+                        <label for="viaemail">Via an email</label>
+                    </li>
+
+                    <li class="radio-form-inline">
+                        <input type="radio" name="verify" id="vialandline" value="phone" />
+                        <label for="vialandline">Via phone call</label>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h2>How should we contact you?</h2>
+                <ul>
+                    <li class="radio-form-inline">
+                        <input type="checkbox" id="contact-email" name="contact" value="email" />
+                        <label for="contact-email">Contact me via email.</label>
+                    </li>
+
+                    <li class="radio-form-inline">
+                        <input type="checkbox" id="contact-phone" name="contact" value="phone" />
+                        <label for="contact-phone">Contact me via phone.</label>
+                    </li>
+
+                </ul>
+            </section>
+
+            <hr>
+
+            <section>
+                <div class="radio-form-inline">
+                    <input type="checkbox" id="agree-terms" name="terms" />
+                    <label for="agree-terms">Agreee to terms?</label>
+                </div>
+            </section>
             
-            <button>Submit</button>
+            <section>
+                <button type="submit">Submit</button>
+            </section>
+
         </form>
     </main>
-    
+
 </body>
+
 </html>
